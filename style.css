@@ -1,0 +1,505 @@
+/* --- Paleta Cyberpunk Sutil (Neón Suavizado) --- */
+/* Base Oscura: #111111 (Gris Oscuro Cálido) */
+/* Neón Principal Suavizado (Acento): #00D1FF (Cian Suave) */
+/* Neón Secundario (Links): #8aff8a (Verde Lima Suave) */
+/* Alerta/Error: #FF69B4 (Rosa Fuerte/Magenta Suave) */
+/* Fondo de Bloques de Contenido: #1A1A1A */
+
+body {
+    /* Fondo: Negro con un toque de profundidad, menos duro */
+    background: linear-gradient(135deg, #111111 0%, #1A1A1A 100%); 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    /* Color de texto base: Blanco puro para mejor legibilidad */
+    color: #FFFFFF; 
+    /* Cambiamos la fuente a una más limpia para mejorar la estética */
+    font-family: 'Arial', sans-serif; 
+}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+/* Header Styling (Estilo Sutil) */
+header {
+    /* Fondo ligeramente más oscuro */
+    background-color: #0A0A0A; 
+    color: #FFFFFF; 
+    padding: 1.5rem 0;
+    /* Sombra profunda y sutil, NO un resplandor de neón */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    /* Borde de acento de neón, pero más fino y suave */
+    border-bottom: 2px solid #00D1FF; 
+}
+
+header h1 {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    letter-spacing: 0.05em; 
+    /* Eliminamos el neón fuerte, usamos un text-shadow sutil */
+    text-shadow: 0 0 5px rgba(0, 209, 255, 0.3); 
+    margin: 0; 
+    color: #00D1FF; /* Título en el nuevo Cian Suave */
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 400; 
+    margin-top: 0.5rem;
+    color: #8aff8a; /* Verde Lima Suave */
+}
+
+/* Navbar Wrapper (Degradado Oscuro) */
+.navbar-wrapper {
+    background: linear-gradient(to right, #1A1A1A, #0A0A0A); 
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+}
+
+/* Navbar Styling 🧭 */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+
+.nav-link {
+    color: #CCCCCC; /* Gris claro */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    /* Transición limpia */
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 209, 255, 0.1); /* Fondo muy sutil */
+    color: #00D1FF; /* Cian Suave */
+    text-shadow: none; /* Quitamos text-shadow en hover */
+}
+
+.nav-link.active {
+    background-color: rgba(138, 255, 138, 0.15); /* Fondo verde lima tenue */
+    color: #8aff8a;
+    /* Borde sutil para destacar */
+    border: 1px solid #8aff8a; 
+    box-shadow: none; /* Quitamos box-shadow */
+}
+
+/* Main Content Area */
+main {
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Section Card (Contenedores) */
+section {
+    /* Fondo más claro para un mejor contraste visual */
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 8px; /* Bordes más suaves */
+    /* Sombra de profundidad, no de brillo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2.5rem;
+    /* Borde muy sutil de color primario */
+    border: 1px solid rgba(0, 209, 255, 0.3); 
+}
+
+/* Section Card Titles (H2) */
+section h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2rem; 
+    font-weight: 700;
+    color: #00D1FF; /* Títulos en Cian Suave */
+    text-shadow: none; 
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+    /* Línea limpia */
+    border-bottom: 1px solid #333333;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 30px;
+    border-radius: 8px;
+    /* Degradado oscuro sutil */
+    background: linear-gradient(135deg, #1A1A1A 0%, #111111 100%);
+    border: 1px solid #00D1FF;
+    margin-bottom: 2rem;
+    /* Sombra muy sutil */
+    box-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
+}
+
+.welcome-section h2 {
+    color: #8aff8a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* Text-shadow muy tenue */
+    text-shadow: 0 0 3px rgba(138, 255, 138, 0.5);
+}
+
+.topic-info h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.25rem;
+    color: #00D1FF; /* Cian para subtítulos de info */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.topic-info ul {
+    list-style-type: '▶ '; /* Icono de lista moderno */
+    padding-left: 1.5rem;
+    color: #E0E0E0;
+}
+
+.topic-info li, .about-content li {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    color: #E0E0E0; 
+}
+
+/* Form Elements (Estilo Caja de Entrada) */
+label {
+    display: block;
+    font-size: 0.875rem; 
+    font-weight: 700;
+    color: #00D1FF; /* Etiqueta en Cian Suave */
+    margin-bottom: 0.5rem; 
+    margin-top: 1rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    /* Borde limpio */
+    border: 1px solid #444444; 
+    border-radius: 4px; 
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box; 
+    font-size: 1rem;
+    color: #8aff8a; /* Texto de entrada en Verde Lima Suave */
+    background-color: #0A0A0A; /* Fondo de entrada muy oscuro */
+    font-family: 'Arial', sans-serif;
+    /* Sombra interna sutil */
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+input:focus,
+textarea:focus {
+    /* Efecto focus: sutil resplandor Cian */
+    border-color: #00D1FF;
+    box-shadow: 0 0 8px rgba(0, 209, 255, 0.6); 
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button and General Primary Button (Estilo 'Execute' Elegante) */
+button[type="submit"], .btn-primary {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%; 
+    /* Degradado de Cian Suave a Azul */
+    background: linear-gradient(135deg, #00D1FF 0%, #0099CC 100%); 
+    color: #111111; /* Texto oscuro sobre el botón */
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px; 
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    /* Sombra de brillo SUTIL */
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.4); 
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem; 
+}
+
+/* Ajuste para el botón de crear post que no debe ser 100% de ancho */
+.discussions-header .btn-primary {
+    width: auto;
+    margin-top: 0;
+    display: inline-block;
+}
+
+
+button[type="submit"]:hover, .btn-primary:hover {
+    background: linear-gradient(135deg, #8aff8a 0%, #00D1FF 100%); /* Cambio elegante de color */
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 18px rgba(138, 255, 138, 0.5); 
+    color: #111111;
+}
+
+/* Error Message (Rojo de Alerta Suave) */
+#error-message {
+    color: #FF69B4; /* Rosa Fuerte/Magenta Suave */
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    /* Text-shadow sutil */
+    text-shadow: 0 0 3px rgba(255, 105, 180, 0.7);
+}
+
+/* Discussions Header and Button */
+.discussions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    /* Línea de separación limpia */
+    border-bottom: 1px solid #333333; 
+}
+
+
+/* Post Card (Discussion Thread) Styling 💬 */
+.post-card {
+    background-color: #1A1A1A; 
+    padding: 24px;
+    border-radius: 8px;
+    /* Borde muy sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    /* Sombra de profundidad limpia */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1.5rem;
+}
+
+.post-card:hover {
+    /* Efecto hover: Transformación sutil y sombra Cian */
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 20px rgba(0, 209, 255, 0.4);
+    border-color: #00D1FF;
+}
+
+.post-card h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    color: #8aff8a; /* Título del post en Verde Lima Suave */
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem; 
+    color: #A0A0A0; /* Meta data en gris claro */
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #333; 
+}
+
+.post-meta span {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.post-meta span::before {
+    content: "•"; /* Símbolo moderno y sutil */
+    color: #00D1FF;
+    font-weight: 800;
+}
+
+.post-content-area {
+    white-space: pre-wrap;
+    line-height: 1.7;
+    color: #E0E0E0; 
+    font-size: 1rem;
+}
+
+.post-author {
+    color: #00D1FF; /* Autor en color de acento Cian Suave */
+    font-weight: 800;
+}
+
+/* Resource Card */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.resource-card {
+    background-color: #1A1A1A;
+    /* Borde de neón sutil */
+    border: 1px solid rgba(0, 209, 255, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.resource-card:hover {
+    box-shadow: 0 0 10px rgba(0, 209, 255, 0.4);
+    transform: translateY(-3px); 
+}
+
+.resource-card h3 {
+    font-family: 'Arial', sans-serif;
+    color: #8aff8a;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0;
+    border-bottom: 1px solid #333333; 
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.resource-card ul {
+    list-style-type: '→ '; 
+    padding-left: 1.5rem;
+}
+
+.resource-card li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #E0E0E0;
+}
+
+/* Footer Styling ⬇️ */
+footer {
+    background-color: #0A0A0A; 
+    color: #A0A0A0;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+/* Modal Styling (for Create New Post) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+    background-color: #1A1A1A;
+    margin: 5% auto;
+    padding: 30px;
+    /* Borde de acento Cian */
+    border: 3px solid #00D1FF; 
+    width: 90%; 
+    max-width: 500px;
+    border-radius: 8px; 
+    /* Sombra de brillo sutil */
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
+}
+
+.modal-content h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8aff8a;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+}
+
+.close {
+    color: #A0A0A0;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF69B4; /* Rosa Fuerte al hacer hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Download buttons (About section) */
+.download-list {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ESTILOS DUPLICADOS PARA .download-btn (Copiados de .btn-primary) */
+.download-btn {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: auto; 
+    display: inline-block; 
+    
+    /* Propiedades copiadas de .btn-primary */
+    background: linear-gradient(135deg, #00D1FF 0%, #0099CC 100%); 
+    color: #111111; 
+    padding: 0.6rem 0.95rem; 
+    border-radius: 4px; 
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.4); 
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0; 
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #8aff8a 0%, #00D1FF 100%); 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(138, 255, 138, 0.5);
+    color: #111111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    section {
+        padding: 20px;
+        border-radius: 4px;
+    }
+    .post-card {
+        padding: 18px;
+    }
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
