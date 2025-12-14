@@ -9,42 +9,36 @@
     <style>
         /* Estilo Base para Fijar el Reproductor (Ventana) */
         #reproductorFlotante {
-            /* Fija el elemento en la parte inferior derecha de la pantalla */
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 1000; /* Asegura que esté por encima de otros contenidos */
-            width: 300px; /* Ancho de la ventana del reproductor */
-            background-color: #1A1A1A; /* Fondo oscuro (Basado en tu estilo anterior) */
-            border: 1px solid rgba(0, 209, 255, 0.5); /* Borde sutil */
+            z-index: 1000; 
+            width: 300px; 
+            background-color: #1A1A1A; 
+            border: 1px solid rgba(0, 209, 255, 0.5); 
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             padding: 10px;
             transition: all 0.3s ease;
         }
 
-        /* Controles de Audio y Botones */
         #contenedorAudio {
-            /* Por defecto, es visible */
-            max-height: 150px; /* Altura máxima para la transición */
+            max-height: 150px; 
             overflow: hidden;
             opacity: 1;
             transition: all 0.3s ease-in-out;
         }
 
-        /* Clase para Ocultar la Ventana */
         #reproductorFlotante.plegado #contenedorAudio {
             max-height: 0;
             padding: 0;
             opacity: 0;
             margin-top: 0;
-            /* Oculta completamente */
             visibility: hidden; 
         }
 
-        /* Estilos de los Botones de Control */
         .control-btn {
-            background-color: #00D1FF; /* Cian Suave */
+            background-color: #00D1FF; 
             color: #111111;
             border: none;
             padding: 8px 15px;
@@ -58,17 +52,25 @@
             transition: background-color 0.2s;
             font-family: 'Arial', sans-serif;
             font-size: 0.9rem;
+            text-decoration: none; /* Añadido para los enlaces de descarga */
         }
 
         .control-btn:hover {
-            background-color: #8aff8a; /* Verde Lima Suave al hacer hover */
+            background-color: #8aff8a; 
         }
 
-        /* Estilo para el botón de Reproducir/Pausar y Detener */
         .controlesPersonalizados {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
+        }
+
+        /* Estilo extra para la lista de descargas */
+        .download-list-fixed {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -98,18 +100,7 @@
             <section id="home">
                 <div class="welcome-section">
                     <h2>Welcome to the AI Bias Discussion Forum</h2>
-                    <p>This forum is dedicated to exploring and discussing issues related to bias and discrimination in artificial intelligence systems. Join the conversation and share your thoughts, experiences, and solutions.</p>
-                    
-                    <div class="topic-info">
-                        <h3>Key Discussion Topics:</h3>
-                        <ul>
-                            <li>Algorithmic bias in hiring systems</li>
-                            <li>Racial and gender discrimination in AI</li>
-                            <li>Ethical considerations in AI development</li>
-                            <li>Mitigation strategies and solutions</li>
-                            <li>Case studies and real-world examples</li>
-                        </ul>
-                    </div>
+                    <p>This forum is dedicated to exploring and discussing issues related to bias and discrimination in artificial intelligence systems.</p>
                 </div>
             </section>
 
@@ -118,49 +109,8 @@
                     <h2>Forum Discussions</h2>
                     <button id="newPostBtn" class="btn-primary">➕ Create New Post</button>
                 </div>
-
                 <div id="postsContainer" class="posts-container">
-                    <div class="post-card">
-                        <h3>The Challenge of Defining 'Fairness' in AI</h3>
-                        <div class="post-meta">
-                            <span class="post-author">Posted by: DataEthicist</span>
-                            <span>On: Oct 26, 2024</span>
-                        </div>
-                        <div class="post-content-area">
-                            It's difficult to implement fairness metrics when there isn't a universal definition. Should we aim for equal opportunity, equal outcome, or something else entirely? Different contexts require different approaches, leading to constant trade-offs.
-                        </div>
                     </div>
-
-                    <div class="post-card">
-                        <h3>Case Study: Bias in Facial Recognition Systems</h3>
-                        <div class="post-meta">
-                            <span class="post-author">Posted by: PrivacyAdvocate</span>
-                            <span>On: Oct 25, 2024</span>
-                        </div>
-                        <div class="post-content-area">
-                            Studies show significant accuracy disparities, often performing worse on darker-skinned individuals, particularly women. This is a clear case of dataset bias that needs urgent regulatory intervention.
-                        </div>
-                    </div>
-                    </div>
-
-                <div id="postModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h3>Create New Discussion</h3>
-                        <form id="postForm">
-                            <label for="postTitle">Title</label>
-                            <input type="text" id="postTitle" placeholder="The title of your discussion topic" required>
-                            
-                            <label for="postContent">Content</label>
-                            <textarea id="postContent" placeholder="Write your post here..." rows="6" required></textarea>
-                            
-                            <label for="postAuthor">Your Name</label>
-                            <input type="text" id="postAuthor" placeholder="Your Name or Alias" required>
-                            
-                            <button type="submit" class="btn-primary">Submit Post</button>
-                        </form>
-                    </div>
-                </div>
             </section>
 
             <section id="resources">
@@ -168,29 +118,9 @@
                 <div class="resources-grid">
                     <div class="resource-card">
                         <h3>📚 Research Papers</h3>
-                        <p>Access academic papers and studies on AI bias and fairness.</p>
                         <ul>
-                            <li>Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</li>
+                            <li>Gender Shades: Intersectional Accuracy Disparities</li>
                             <li>Machine Bias: Risk Assessments in Criminal Sentencing</li>
-                            <li>Fairness and Abstraction in Sociotechnical Systems</li>
-                        </ul>
-                    </div>
-                    <div class="resource-card">
-                        <h3>🛠️ Tools & Frameworks</h3>
-                        <p>Tools for detecting and mitigating bias in AI systems.</p>
-                        <ul>
-                            <li>IBM AI Fairness 360</li>
-                            <li>Google's What-If Tool</li>
-                            <li>Microsoft Fairlearn</li>
-                        </ul>
-                    </div>
-                    <div class="resource-card">
-                        <h3>🏛️ Organizations</h3>
-                        <p>Groups working on AI ethics and fairness.</p>
-                        <ul>
-                            <li>Partnership on AI</li>
-                            <li>AI Now Institute</li>
-                            <li>Algorithmic Justice League</li>
                         </ul>
                     </div>
                 </div>
@@ -199,23 +129,21 @@
             <section id="about">
                 <h2>About This Forum</h2>
                 <div class="about-content">
-                    <p>This forum was created to foster meaningful discussions about one of the most pressing issues in artificial intelligence today: bias and discrimination.</p>
+                    <p>Espacio para discutir soluciones ante el sesgo en sistemas de IA.</p>
                     
-                    <h3>Our Mission</h3>
-                    <p>To create a space where developers, researchers, ethicists, and concerned citizens can discuss, analyze, and propose solutions to address bias in AI systems.</p>
-                    
-                    <h3>Community Guidelines</h3>
-                    <ul>
-                        <li>Be respectful and constructive in discussions</li>
-                        <li>Back up claims with evidence when possible</li>
-                        <li>Focus on solutions as well as problems</li>
-                        <li>Respect diverse perspectives and experiences</li>
-                    </ul>
-
                     <h3>Downloads</h3>
-                    <p>Descarga los archivos de la carpeta <code>downloads/</code>:</p>
-                    <div id="downloadContainer" class="download-list">
-                        <p id="downloadLoading">Cargando archivos...</p>
+                    <p>Descarga los archivos de recursos directamente:</p>
+                    
+                    <div class="download-list-fixed">
+                        <a href="downloads/ejercicio_estadistica_1.pdf" download class="control-btn">
+                            📄 Ejercicio 1 - Datos Consecutivos (PDF)
+                        </a>
+                        <a href="downloads/ejercicio_estadistica_2.pdf" download class="control-btn">
+                            📄 Ejercicio 2 - Datos No Consecutivos (PDF)
+                        </a>
+                        <a href="downloads/podcast.MP3" download class="control-btn">
+                            🎵 Podcast Completo (MP3)
+                        </a>
                     </div>
                 </div>
             </section>
@@ -223,7 +151,7 @@
 
         <footer>
             <div class="container">
-                <p>&copy; 2025 AI Bias & Discrimination Forum. All rights reserved.</p>
+                <p>&copy; 2025 AI Bias & Discrimination Forum.</p>
             </div>
         </footer>
     </div>
@@ -232,26 +160,19 @@
         <button id="toggleReproductor" class="control-btn" aria-expanded="true">
             ▶ Ocultar Reproductor
         </button>
-        
         <div id="contenedorAudio">
             <audio id="miAudio" preload="auto">
                 <source src="audio/podcast.MP3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
             </audio>
-
             <div class="controlesPersonalizados">
-                <button id="playPauseBtn" class="control-btn">
-                    <span class="icono">▶</span> Reproducir
-                </button>
-                <button id="stopBtn" class="control-btn">
-                    <span class="icono">■</span> Detener
-                </button>
+                <button id="playPauseBtn" class="control-btn">▶ Reproducir</button>
+                <button id="stopBtn" class="control-btn">■ Detener</button>
             </div>
-            
         </div>
     </div>
     
     <script>
+        // Lógica del reproductor integrada
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.getElementById('miAudio');
             const playPauseBtn = document.getElementById('playPauseBtn');
@@ -261,50 +182,29 @@
 
             let isPlaying = false;
 
-            // --- FUNCIÓN DE REPRODUCIR / PAUSAR ---
             playPauseBtn.addEventListener('click', function() {
                 if (isPlaying) {
                     audio.pause();
-                    playPauseBtn.innerHTML = '<span class="icono">▶</span> Reproducir';
+                    playPauseBtn.innerHTML = '▶ Reproducir';
                     isPlaying = false;
                 } else {
-                    audio.play().catch(error => {
-                        console.error("Error al intentar reproducir el audio:", error);
-                        // Muestra un mensaje al usuario si el navegador bloquea el autoplay
-                        alert("El navegador requiere interacción para reproducir audio (haz clic para comenzar).");
-                    });
-                    playPauseBtn.innerHTML = '<span class="icono">⏸</span> Pausar';
+                    audio.play();
+                    playPauseBtn.innerHTML = '⏸ Pausar';
                     isPlaying = true;
                 }
             });
 
-            // --- FUNCIÓN DE DETENER ---
             stopBtn.addEventListener('click', function() {
                 audio.pause();
-                audio.currentTime = 0; // Regresa al inicio
-                playPauseBtn.innerHTML = '<span class="icono">▶</span> Reproducir';
-                isPlaying = false;
-            });
-            
-            // Si el audio termina, actualiza el botón
-            audio.addEventListener('ended', function() {
-                playPauseBtn.innerHTML = '<span class="icono">▶</span> Reproducir';
+                audio.currentTime = 0;
+                playPauseBtn.innerHTML = '▶ Reproducir';
                 isPlaying = false;
             });
 
-
-            // --- FUNCIÓN DE OCULTAR / DESPLEGAR (Plegar) ---
             toggleReproductorBtn.addEventListener('click', function() {
                 reproductorFlotante.classList.toggle('plegado');
-                
                 const isExpanded = !reproductorFlotante.classList.contains('plegado');
-                toggleReproductorBtn.setAttribute('aria-expanded', isExpanded);
-
-                if (isExpanded) {
-                    toggleReproductorBtn.innerHTML = '▶ Ocultar Reproductor';
-                } else {
-                    toggleReproductorBtn.innerHTML = '◀ Mostrar Reproductor';
-                }
+                toggleReproductorBtn.innerHTML = isExpanded ? '▶ Ocultar Reproductor' : '◀ Mostrar Reproductor';
             });
         });
     </script>
